@@ -80,7 +80,6 @@ class _HomeState extends State<Home> {
 //Build our Home widget
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: new AppBar(
         title: new Text("Medicines"),
@@ -91,15 +90,12 @@ class _HomeState extends State<Home> {
           children: <Widget>[
             _createSearchView(),
             _firstSearch ? _createListView() : _performSearch(),
-            RaisedButton(onPressed: (){
-              writedata();
-              dbref.child("medical shop name").set({
-
-              });}
-              ,
+            RaisedButton(
+              onPressed: writedata(),
               textColor: Colors.black,
               splashColor: Colors.lightGreen,
-              child: Text("SUBMIT",style: TextStyle(fontStyle: FontStyle.italic)),)
+              child: Text(
+                  "SUBMIT", style: TextStyle(fontStyle: FontStyle.italic)),)
           ],
         ),
       ),
@@ -216,9 +212,6 @@ class _HomeState extends State<Home> {
       if (medicines[index].toLowerCase().contains(_query.toLowerCase())) {
         _filterList.add(medicines[index]);
         _counter1.add(_counter[index]);
-        dbref.child("pharmacy name").set({
-          _filterList[index]:_counter[index],
-        });
       }
     }
     return _createFilteredListView();
@@ -303,4 +296,9 @@ class _HomeState extends State<Home> {
     );
   }
 
+
+  writedata() {
+    dbref.child('pharmacy name').set({
+      'medicine name': 'quantity'
+  }
 }
