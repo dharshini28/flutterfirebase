@@ -300,5 +300,7 @@ class _HomeState extends State<Home> {
   writedata() {
     dbref.child('pharmacy name').set({
       'medicine name': 'quantity'
-  }
+  });
 }
+}
+
