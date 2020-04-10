@@ -1,20 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutterfirebase/screens/Enter_a_city.dart';
-import 'package:flutterfirebase/screens/places_screen.dart';
+import 'package:flutterfirebase/screens/pharmacies_in_city.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import 'Pharmaciesaccess.dart';
+import 'Pharmaciespage.dart';
 
 void main() {
   runApp(MaterialApp(
     title: 'Homepage',
-    home: FirstRoute(),
+    home: Home(),
 
   ));
 }
 
-class FirstRoute extends StatelessWidget {
+class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -70,11 +69,11 @@ class FirstRoute extends StatelessWidget {
                               height: 30,
                               width: 110,
                               color: Colors.lightGreenAccent,
-                              child: Center(child: Text('PHARMACY')),),
+                              child: Center(child: Text('PHARMACIES')),),
                             onTap: () {
                               Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) {  return Pharmaciesaccess();}));}
+                                  MaterialPageRoute(builder: (context) {  return Pharmaciespage();}));}
                         )
                     ),
                   ],

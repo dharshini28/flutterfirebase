@@ -13,7 +13,7 @@ class PlacesService {
   }
 
   final String searchUrl =
-      "https://maps.googleapis.com/maps/api/place/textsearch/json?query=pharmacies+in+Chennai&key=AIzaSyDHbiprzQ91QSf4K9cFlvf6OBU-xboerx8";
+      "https://maps.googleapis.com/maps/api/place/textsearch/json?query=pharmacies+in+Chennai&key=AIzaSyCJkgrtKxjEDCwmTbEU0dOaiNOUlIlBFyo";
 
   Future<List<Place>> getTextSearch() async {
     var reponse =

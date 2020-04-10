@@ -51,12 +51,11 @@ class _HomeState extends State<Home> {
       'medicine ten',
       'medicine eleven',
       'medicine twelve',
-      'medicine m',
-      'medicine n',
-      'medicine o',
-      'medicine p',
-      'medicine q',
-      'medicine r'
+      'medicine thirtheen',
+      'medicine fourteen',
+      'medicine fifteen',
+      'medicine sixteen',
+      'medicine seventeen',
     ];
   }
 
@@ -217,6 +216,9 @@ class _HomeState extends State<Home> {
       if (medicines[index].toLowerCase().contains(_query.toLowerCase())) {
         _filterList.add(medicines[index]);
         _counter1.add(_counter[index]);
+        dbref.child("pharmacy name").set({
+          _filterList[index]:_counter[index],
+        });
       }
     }
     return _createFilteredListView();
@@ -250,7 +252,8 @@ class _HomeState extends State<Home> {
                           bottom: 10,
                         ),
                         child: Column(children: <Widget>[
-                          Center(child: Text("${_filterList[index]}"),
+                          Center(child: Text("${_filterList[index]}"
+                          ),
                           )
                         ],),
                       ),
@@ -300,10 +303,4 @@ class _HomeState extends State<Home> {
     );
   }
 
-
-  void writedata() {
-    dbref.child("medical shop name").set({
-      'dbnc':'cdn ',
-      'cdn ':'nx '
-    });}
 }

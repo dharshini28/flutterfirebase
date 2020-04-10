@@ -46,7 +46,7 @@ class PlacesScreenState extends State<PlacesScreen> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) {  return UserRoute();}),
+                MaterialPageRoute(builder: (context) {  return Home();}),
               );
             },
             title: new Text(
