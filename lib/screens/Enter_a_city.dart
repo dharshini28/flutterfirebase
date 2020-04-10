@@ -16,16 +16,17 @@ class Enter_cityState extends State<Enter_city> {
         ),
         backgroundColor: Colors.white,
         body: Container(
+          color: Colors.black,
           child: Center(
             child: Column(
               children: <Widget>[
                 TextFormField(
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                   ),
                   decoration: const InputDecoration(
                     hintText: 'Enter city',
-                    fillColor: Colors.black,
+                    fillColor: Colors.white,
                   ),
                   validator: (value) {
                     if (value.isEmpty) {

@@ -14,7 +14,7 @@ class UserRoute extends StatelessWidget {
     return MaterialApp(
       title: "ListView SearchView",
       home: new Home(),
-      theme: ThemeData(primaryColor: Colors.cyan),
+      theme: ThemeData(primaryColor: Colors.lightGreen),
     );
   }
 }
@@ -87,7 +87,7 @@ class _HomeState extends State<Home> {
         title: new Text("Medicines"),
       ),
       body: new Container(
-        margin: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
+        color: Colors.black,
         child: new Column(
           children: <Widget>[
             _createSearchView(),
@@ -98,7 +98,8 @@ class _HomeState extends State<Home> {
 
               });}
               ,
-              splashColor: Colors.cyan,
+              textColor: Colors.black,
+              splashColor: Colors.lightGreen,
               child: Text("SUBMIT",style: TextStyle(fontStyle: FontStyle.italic)),)
           ],
         ),
@@ -112,9 +113,12 @@ class _HomeState extends State<Home> {
       decoration: BoxDecoration(border: Border.all(width: 1.0)),
       child: new TextField(
         controller: _searchview,
+        style: TextStyle(
+          color: Colors.white,
+        ),
         decoration: InputDecoration(
           hintText: "Search",
-          hintStyle: new TextStyle(color: Colors.grey[300]),
+          hintStyle: new TextStyle(color: Colors.white),
         ),
         textAlign: TextAlign.center,
       ),
@@ -142,7 +146,7 @@ class _HomeState extends State<Home> {
                   top: 10,
                   bottom: 10),
               child: Card(
-                color: Colors.cyan[100],
+                color: Colors.lightGreen[100],
                 elevation: 5.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -232,7 +236,7 @@ class _HomeState extends State<Home> {
                   top: 10,
                   bottom: 10),
               child: Card(
-                color: Colors.cyan[100],
+                color: Colors.lightGreen[100],
                 elevation: 5.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
