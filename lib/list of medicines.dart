@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
+
 void main() {
   runApp(MaterialApp(
     title: 'Homepage',
@@ -57,7 +58,6 @@ class _HomeState extends State<Home> {
       'medicine q',
       'medicine r'
     ];
-    medicines.sort();
   }
 
   _HomeState() {

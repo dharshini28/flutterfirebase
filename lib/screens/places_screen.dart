@@ -1,3 +1,4 @@
+import 'package:flutterfirebase/list of medicines.dart';
 import 'package:flutterfirebase/models/place_model.dart';
 import 'package:flutterfirebase/services/place_service.dart';
 import 'package:flutter/material.dart';
@@ -42,6 +43,12 @@ class PlacesScreenState extends State<PlacesScreen> {
       return new ListView(
         children: _places.map((f) {
           return new ListTile(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {  return UserRoute();}),
+              );
+            },
             title: new Text(
               f.name,
               style: TextStyle(color: Colors.black),
